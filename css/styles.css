@@ -1,0 +1,23 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+}
+
+/* ---- canvas ---- */
+
+canvas {
+    border: 1px solid rgb(230, 10, 10);
+    /* background: rgb(230, 224, 224); */
+    /* background-image: url('../img/panel1.png'); */
+    /* background-position: center; */
+}
