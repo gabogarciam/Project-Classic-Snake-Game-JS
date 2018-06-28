@@ -10,8 +10,6 @@ window.onload = function () {
         console.log('buildSplash()');
         container = document.createElement("div"); //Creamos el elemento div
         container.setAttribute("class", "splashContainer"); //Definimos clase al div
-        container.setAttribute("width", "window.innerWidth"); //Definimos clase al div
-        container.setAttribute("height", "window.innerHeight"); //Definimos clase al div
         document.body.appendChild(container); //Agregamos el div al body
         button = document.createElement("span"); //Creamos el elemento span
         button.setAttribute("class", "btn-start btn"); //Definimos clase al boton
