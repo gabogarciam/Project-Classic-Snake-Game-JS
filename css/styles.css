@@ -21,3 +21,51 @@ canvas {
     /* background-image: url('../img/panel1.png'); */
     /* background-position: center; */
 }
+
+.splashContainer,
+.gameContainer,
+.gameOverContainer {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 800px;
+height: 800px;
+border: 1px solid rgb(10, 32, 230);
+background: pink;
+}
+
+.splashContainer{
+    background-image: url('../img/Eamb.gif')!important;
+}
+
+span {
+    overflow: hidden;
+}
+
+.btn {
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid whitesmoke;
+    border-radius: 0.6em;
+    color: red;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    background: lightskyblue;
+}
+
+.btn:hover {
+    color: #fff;
+    outline: 0;
+}
