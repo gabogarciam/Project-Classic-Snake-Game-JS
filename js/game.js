@@ -25,7 +25,7 @@ class Game {
         this.player.render();
         this.food.render();
 
-        window.requestAnimationFrame(function(){
+        window.requestAnimationFrame( function() {
             if (!self.isEnded) {
                 self.doFrame();
             }
@@ -38,11 +38,11 @@ class Game {
 
     checkCollisionFood() {
         var difx = Math.abs(this.player.posX - this.food.posX);
-		var dify = Math.abs(this.player.posY - this.food.posY);
+        var dify = Math.abs(this.player.posY - this.food.posY);
 		if ( difx >= 0 && difx < this.player.size && dify >= 0 && dify < this.player.size ) {
 			this.food.realocate();
-			this.next = new Level( this.posX, this.posY );
-			// console.log("colition!");
+            this.next = new Level( this.posX, this.posY );
+			console.log('apples = '+self.apples);
 			return true;
 		} else {
 			// console.log("No colition!");
@@ -83,6 +83,6 @@ class Game {
 
     endGame() {
         this.isEnded = true;
-        this.gameOverCallback();
+        this.gameOverCallback(this.apples);
     }
 }

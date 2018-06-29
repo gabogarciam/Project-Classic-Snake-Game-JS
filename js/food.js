@@ -2,7 +2,7 @@
 
 class Block {
 	constructor(){
-		this.size = 30;
+		this.size = 10;
 	}
 }
 

@@ -31,11 +31,20 @@ align-items: center;
 width: 800px;
 height: 800px;
 border: 1px solid rgb(10, 32, 230);
-background: pink;
+/* background: pink; */
 }
 
 .splashContainer{
     background-image: url('../img/Eamb.gif')!important;
+    width: 100vw;
+    height: 100vh;
+}
+
+.gameOverContainer {
+    background-image: url('../img/gbg.jpg')!important;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
 }
 
 span {

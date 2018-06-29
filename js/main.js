@@ -84,7 +84,7 @@ window.onload = function () {
         button.innerText = "RESTART"; //Insertamos texto en el span
         container.appendChild(button); //Lo agregamos al div
         button.addEventListener("click", handleRestartGame); //evento listener click en btn game
-        console.log('soy el GameOver');
+        console.log('buildGameOver()');
     }
 
     function handleRestartGame() {
