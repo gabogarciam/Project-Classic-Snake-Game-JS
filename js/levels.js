@@ -1,7 +1,7 @@
 class Levels {
     constructor (posX, posY, ctx) {
         this.ctx = ctx;
-        this.speed = 3;
+        this.speed = 5;
         this.direction = '';
         var level = new Level( posX, posY, ctx);
         this.levels = [level];
@@ -45,7 +45,29 @@ class Levels {
 		}
 	}
 
-	updatePosition( direction ) {
+	checkMove( move ) {
+		switch ( move ) {
+            case 'up':
+				return ( this.direction === 'down' ) ? this.direction : move;
+				break;
+			case 'down':
+                return ( this.direction === 'up' ) ? this.direction : move;
+				break;
+			case 'left':
+                return ( this.direction === 'right' ) ? this.direction : move;
+				break;
+			case 'right':
+                return ( this.direction === 'left' ) ? this.direction : move;
+				break;
+		
+			default:
+				break;
+        }
+	}
+
+	updatePosition( move ) {
+        var direction = this.checkMove( move );
+
 		if ( this.levels.length > 1 ) {
 			for ( var i = this.levels.length; i > 1; i--) {
 				this.levels[i-1].posX = this.levels[i-2].posX;

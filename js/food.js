@@ -1,11 +1,5 @@
 'use strict'
 
-class Block {
-	constructor(){
-		this.size = 10;
-	}
-}
-
 class Food extends Block {
 	constructor(ctx, canvas){
 		super();
