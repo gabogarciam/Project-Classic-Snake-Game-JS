@@ -7,6 +7,8 @@ class Game {
         this.gameOverCallback = gameOverCallback;
         this.move = '';
         this.isEnded = false;
+        this.background = new Image();
+        this.background.src = "img/newbg.jpg";
     }
 
     startGame() {
@@ -18,10 +20,10 @@ class Game {
     doFrame() {
         var self = this;
         this.clearCanvas();
+        this.drawBackground()
         this.player.updatePosition( this.move );
         this.player.checkCollisionFood( this.food );
         this.checkCollisionWall();
-
         this.player.render();
         this.food.render();
 
@@ -30,6 +32,10 @@ class Game {
                 self.doFrame();
             }
         })
+    }
+
+    drawBackground() {
+        this.ctx.drawImage(this.background, 0, 0)
     }
 
     clearCanvas() {
